@@ -13,13 +13,14 @@ class Recipe: Identifiable, Decodable {
     
     var name:String
     var description: String 
-    var prepTime: String
-    var cookTime: String
-    var totalTime: String
+    var prepTimeMin: Int
+    var cookTimeMin: Int
+    var totalTimeMin: Int?
     var servings: Int
     var ingredients: [Ingredient]
     var directions: [String]
     var category:String
     var source: String
+    var authorId: String
     
 }

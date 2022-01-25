@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1047220837C45B0764FBCFF4 /* Pods_RecipeSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */; };
 		3B844FC3278CE01900CFCC86 /* RecipeSNSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FC2278CE01900CFCC86 /* RecipeSNSApp.swift */; };
 		3B844FC5278CE01900CFCC86 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FC4278CE01900CFCC86 /* RecipeTabView.swift */; };
 		3B844FC7278CE02500CFCC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B844FC6278CE02500CFCC86 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		3B844FEA2795E4D400CFCC86 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FE92795E4D400CFCC86 /* Recipe.swift */; };
 		3B844FED2795E61600CFCC86 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FEC2795E61600CFCC86 /* Ingredient.swift */; };
 		3B844FF02795E6A800CFCC86 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */; };
+		3BD7F90127A0ADAB003274D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7F90027A0ADAB003274D5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		3B844FE92795E4D400CFCC86 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		3B844FEC2795E61600CFCC86 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		3BD7F90027A0ADAB003274D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		975E6EB41E191E5DB14FD2FB /* Pods-RecipeSNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSNS.release.xcconfig"; path = "Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS.release.xcconfig"; sourceTree = "<group>"; };
+		A84C5528787276F49C3AA8D2 /* Pods-RecipeSNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSNS.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1047220837C45B0764FBCFF4 /* Pods_RecipeSNS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3920766EAE50B55C15E0CC10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A84C5528787276F49C3AA8D2 /* Pods-RecipeSNS.debug.xcconfig */,
+				975E6EB41E191E5DB14FD2FB /* Pods-RecipeSNS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B844FB6278CE01800CFCC86 = {
 			isa = PBXGroup;
 			children = (
 				3B844FC1278CE01900CFCC86 /* RecipeSNS */,
 				3B844FC0278CE01900CFCC86 /* Products */,
+				3920766EAE50B55C15E0CC10 /* Pods */,
+				AA5C8A97CDEB11E062C892E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +94,7 @@
 				3B844FE72795E34E00CFCC86 /* Models */,
 				3B844FC6278CE02500CFCC86 /* Assets.xcassets */,
 				3B844FCB278CE02500CFCC86 /* Info.plist */,
+				3BD7F90027A0ADAB003274D5 /* GoogleService-Info.plist */,
 				3B844FC8278CE02500CFCC86 /* Preview Content */,
 			);
 			path = RecipeSNS;
@@ -125,6 +145,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		AA5C8A97CDEB11E062C892E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B844FCE278CE02500CFCC86 /* Build configuration list for PBXNativeTarget "RecipeSNS" */;
 			buildPhases = (
+				C1BE43FFD4159CEBB5DC8AF9 /* [CP] Check Pods Manifest.lock */,
 				3B844FBB278CE01800CFCC86 /* Sources */,
 				3B844FBC278CE01800CFCC86 /* Frameworks */,
 				3B844FBD278CE01800CFCC86 /* Resources */,
+				23800D1B0B352C0D04DE5653 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,10 +214,53 @@
 			files = (
 				3B844FCA278CE02500CFCC86 /* Preview Assets.xcassets in Resources */,
 				3B844FC7278CE02500CFCC86 /* Assets.xcassets in Resources */,
+				3BD7F90127A0ADAB003274D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23800D1B0B352C0D04DE5653 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1BE43FFD4159CEBB5DC8AF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipeSNS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B844FBB278CE01800CFCC86 /* Sources */ = {
@@ -328,6 +401,7 @@
 		};
 		3B844FCF278CE02500CFCC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A84C5528787276F49C3AA8D2 /* Pods-RecipeSNS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +424,7 @@
 		};
 		3B844FD0278CE02500CFCC86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 975E6EB41E191E5DB14FD2FB /* Pods-RecipeSNS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
