@@ -18,7 +18,9 @@ struct RecipeSNSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RecipeTabView()
+            LaunchView()
+                .environmentObject(RecipeModel())
+                .environmentObject(UserModel())
         }
     }
 }
