@@ -28,7 +28,7 @@ struct LaunchView: View {
                     Text("Sign In")
                 }
                 .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
-                    LoginForm()
+                    LoginForm(formShowing: $loginFormShowing)
                 }
                 
                 // Create account button
