@@ -38,7 +38,7 @@ struct LaunchView: View {
                     Text("Create Account")
                 }
                 .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
-                    CreateAccountForm()
+                    CreateAccountForm(formShowing: $createAccountFormShowing)
                 }
 
             }
