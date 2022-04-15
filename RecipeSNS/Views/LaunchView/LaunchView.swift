@@ -18,30 +18,11 @@ struct LaunchView: View {
     var body: some View {
         if !user.loggedIn {
             //Showing logged out view
-            VStack (spacing: 20) {
-                
-                // Sign in button
-                Button {
-                    // show login form
-                    loginFormShowing = true
-                } label: {
-                    Text("Sign In")
+            LoginView()
+                .onAppear() {
+                    // Check if the user is logged in or out
+                    user.checkLogin()
                 }
-                .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
-                    LoginForm(formShowing: $loginFormShowing)
-                }
-                
-                // Create account button
-                Button {
-                    createAccountFormShowing = true
-                } label: {
-                    Text("Create Account")
-                }
-                .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
-                    CreateAccountForm(formShowing: $createAccountFormShowing)
-                }
-
-            }
         } else {
             // Show logged in view
             RecipeTabView()

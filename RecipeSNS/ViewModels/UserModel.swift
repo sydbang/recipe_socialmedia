@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class UserModel: ObservableObject {
     
@@ -14,5 +15,9 @@ class UserModel: ObservableObject {
     init() {
         
         
+    }
+    
+    func checkLogin() {
+        loggedIn = Auth.auth().currentUser != nil ? true : false
     }
 }

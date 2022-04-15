@@ -13,4 +13,9 @@ struct Constants {
     static var searchTab = 1
     static var savedTab = 2
     static var profileTab = 3
+    
+    enum LoginMode {
+        case login
+        case createAccount
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1047220837C45B0764FBCFF4 /* Pods_RecipeSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */; };
+		3B236975280969A4004C8B53 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B236974280969A4004C8B53 /* LoginView.swift */; };
 		3B844FC3278CE01900CFCC86 /* RecipeSNSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FC2278CE01900CFCC86 /* RecipeSNSApp.swift */; };
 		3B844FC5278CE01900CFCC86 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FC4278CE01900CFCC86 /* RecipeTabView.swift */; };
 		3B844FC7278CE02500CFCC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B844FC6278CE02500CFCC86 /* Assets.xcassets */; };
@@ -22,12 +23,11 @@
 		3B844FF02795E6A800CFCC86 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */; };
 		3BC10BDE27E9C83D00485765 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BDD27E9C83D00485765 /* LaunchView.swift */; };
 		3BC10BE127E9C92300485765 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BE027E9C92300485765 /* UserModel.swift */; };
-		3BC10BE427E9CFDB00485765 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BE327E9CFDB00485765 /* LoginForm.swift */; };
-		3BC10BE727E9D01700485765 /* CreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BE627E9D01700485765 /* CreateAccountForm.swift */; };
 		3BD7F9FB27A8983C003274D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7F9FA27A8983C003274D5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B236974280969A4004C8B53 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B844FBF278CE01900CFCC86 /* RecipeSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B844FC2278CE01900CFCC86 /* RecipeSNSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSNSApp.swift; sourceTree = "<group>"; };
 		3B844FC4278CE01900CFCC86 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		3BC10BDD27E9C83D00485765 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		3BC10BE027E9C92300485765 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		3BC10BE327E9CFDB00485765 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-		3BC10BE627E9D01700485765 /* CreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountForm.swift; sourceTree = "<group>"; };
 		3BD7F9FA27A8983C003274D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		975E6EB41E191E5DB14FD2FB /* Pods-RecipeSNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSNS.release.xcconfig"; path = "Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,8 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC10BDD27E9C83D00485765 /* LaunchView.swift */,
-				3BC10BE327E9CFDB00485765 /* LoginForm.swift */,
-				3BC10BE627E9D01700485765 /* CreateAccountForm.swift */,
+				3B236974280969A4004C8B53 /* LoginView.swift */,
 			);
 			path = LaunchView;
 			sourceTree = "<group>";
@@ -287,15 +284,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B844FDF278CE7DC00CFCC86 /* RecipeProfileView.swift in Sources */,
-				3BC10BE727E9D01700485765 /* CreateAccountForm.swift in Sources */,
 				3BC10BDE27E9C83D00485765 /* LaunchView.swift in Sources */,
+				3B236975280969A4004C8B53 /* LoginView.swift in Sources */,
 				3B844FD5278CE77A00CFCC86 /* RecipeHomeView.swift in Sources */,
 				3B844FED2795E61600CFCC86 /* Ingredient.swift in Sources */,
 				3B844FC5278CE01900CFCC86 /* RecipeTabView.swift in Sources */,
 				3B844FD9278CE79000CFCC86 /* RecipeSearchView.swift in Sources */,
 				3B844FE3278CE96C00CFCC86 /* Constants.swift in Sources */,
 				3B844FC3278CE01900CFCC86 /* RecipeSNSApp.swift in Sources */,
-				3BC10BE427E9CFDB00485765 /* LoginForm.swift in Sources */,
 				3B844FF02795E6A800CFCC86 /* RecipeModel.swift in Sources */,
 				3B844FDC278CE7A400CFCC86 /* RecipeSavedView.swift in Sources */,
 				3BC10BE127E9C92300485765 /* UserModel.swift in Sources */,
