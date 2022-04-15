@@ -6,10 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct RecipeProfileView: View {
+    
+    @EnvironmentObject var user: UserModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Profile")
+            
+            Button {
+                try! Auth.auth().signOut()
+                user.loggedIn = false
+            } label: {
+                Text("Sign Out")
+            }
+        }
     }
 }
 

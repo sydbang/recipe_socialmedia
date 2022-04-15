@@ -13,8 +13,6 @@ class UserModel: ObservableObject {
     @Published var loggedIn: Bool = false
     
     init() {
-        
-        
     }
     
     func checkLogin() {
