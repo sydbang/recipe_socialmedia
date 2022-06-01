@@ -10,6 +10,8 @@ import FirebaseAuth
 
 struct LoginView: View {
     
+    @EnvironmentObject var user: UserModel
+    
     @State var loginMode = Constants.LoginMode.login
     
     @State private var email: String = ""
@@ -39,11 +41,14 @@ struct LoginView: View {
             
             Spacer()
             
-            Picker (selection: $loginMode, label: Text("Picker"), content: {
+            Picker (selection: $loginMode, label: Text("Picker")) {
                 Text("Login")
                     .tag(Constants.LoginMode.login)
                 Text("Sign up")
                     .tag(Constants.LoginMode.createAccount)
+            }
+            .onChange(of: loginMode, perform: { (value) in
+                errorMessage = nil
             })
             .pickerStyle(SegmentedPickerStyle())
             
@@ -87,7 +92,9 @@ struct LoginView: View {
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 errorMessage = error!.localizedDescription
+                return
             }
+            user.loggedIn = true
         }
     }
     func signIn() {
@@ -96,7 +103,9 @@ struct LoginView: View {
             //May need DispatchQueue.main.async {}
             if error != nil {
                 errorMessage = error?.localizedDescription
+                return
             }
+            user.loggedIn = true
         }
     }
 }

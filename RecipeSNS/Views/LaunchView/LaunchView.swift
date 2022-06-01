@@ -12,9 +12,6 @@ struct LaunchView: View {
     
     @EnvironmentObject var user: UserModel
     
-    @State var loginFormShowing = false
-    @State var createAccountFormShowing = false
-    
     var body: some View {
         if !user.loggedIn {
             //Showing logged out view
@@ -27,10 +24,6 @@ struct LaunchView: View {
             // Show logged in view
             RecipeTabView()
         }
-    }
-    
-    func checkLogin() {
-        user.loggedIn = Auth.auth().currentUser == nil ? false : true
     }
 }
 
