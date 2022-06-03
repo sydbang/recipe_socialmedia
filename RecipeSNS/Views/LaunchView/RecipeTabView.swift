@@ -17,7 +17,7 @@ struct RecipeTabView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "house")
-                        Text("Home")
+                        Text("New Recipes")
                     }
                 }
                 .tag(Constants.homeTab)
@@ -44,7 +44,7 @@ struct RecipeTabView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "person.crop.circle")
-                        Text("Profile")
+                        Text("My Recipes")
                     }
                 }
                 .tag(Constants.profileTab)

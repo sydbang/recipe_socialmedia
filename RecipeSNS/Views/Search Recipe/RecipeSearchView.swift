@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct RecipeSearchView: View {
+    
+    @State private var filterBy = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SearchBarView(filterBy: $filterBy)
+                .padding()
+            Spacer()
+        }
     }
 }
 
