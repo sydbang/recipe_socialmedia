@@ -38,8 +38,73 @@ struct AddRecipeView: View {
     @State private var placeHolderImage = Image("noImageAvailable")
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button("Clear") {
+                    clear()
+                }
+                Spacer()
+                Button("Add") {
+                    addRecipe()
+                    clear()
+                    tabSelection = Constants.profileTab
+                }
+            }
+            
+            // Scroll view
+            ScrollView {
+                VStack {
+                    
+                    // Recipe Image
+                    placeHolderImage
+                        .resizable()
+                        .scaledToFit()
+                    
+                    HStack {
+                        Spacer()
+                        Button("Photo Library") {
+                            isShowingImagePicker = true
+                            selectedImageSource = .photoLibrary
+                        }
+                        Spacer()
+                        Text(" | ")
+                        Spacer()
+                        Button("Camera") {
+                            isShowingImagePicker = true
+                            selectedImageSource = .camera
+                        }
+                        Spacer()
+                    }
+                    // need to create sheet for imagepicker
+                     
+                }
+            }
+        }
     }
+    
+    func clear() {
+        name = ""
+        description = ""
+        prepTime = ""
+        cookTime = ""
+        totalTime = ""
+        servings = ""
+        source = ""
+        category = ""
+        
+        highlights = [String]()
+        directions = [String]()
+        
+        ingredients = [Ingredient]()
+        
+        recipeImage = nil
+        placeHolderImage = Image("noImageAvailable")
+    }
+    
+    func addRecipe() {
+        // TODO
+    }
+    
 }
 
 struct AddRecipeView_Previews: PreviewProvider {

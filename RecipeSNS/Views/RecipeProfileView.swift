@@ -12,22 +12,26 @@ struct RecipeProfileView: View {
     
     @EnvironmentObject var user: UserModel
     
+    @Binding var selectedTab: Int
+    
     var body: some View {
-        VStack {
-            Text("Profile")
-            
-            Button {
-                try! Auth.auth().signOut()
-                user.loggedIn = false
-            } label: {
-                Text("Sign Out")
+        NavigationView {
+            VStack {
+                HStack {
+                    
+                    NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab), label: {Image(systemName: "plus.circle")})
+ 
+                }
+                Text("Profile")
+                
+                Button {
+                    try! Auth.auth().signOut()
+                    user.loggedIn = false
+                } label: {
+                    Text("Sign Out")
+                }
             }
         }
     }
 }
 
-struct RecipeProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeProfileView()
-    }
-}
