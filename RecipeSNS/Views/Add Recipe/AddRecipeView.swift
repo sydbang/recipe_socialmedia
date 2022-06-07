@@ -89,10 +89,12 @@ struct AddRecipeView: View {
                     AddListData(list: $directions, title: "Directions", placeholderText: "Add the oil to the pan")
                     
                     // Ingredients
-                    
+                    AddIngredientData(ingredients: $ingredients)
                 }
             }
         }
+        .padding()
+        .navigationBarHidden(true)
     }
     
     func clear() {

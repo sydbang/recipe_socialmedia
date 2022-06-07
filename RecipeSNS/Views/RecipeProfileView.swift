@@ -20,6 +20,7 @@ struct RecipeProfileView: View {
                 HStack {
                     
                     NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab), label: {Image(systemName: "plus.circle")})
+                        
  
                 }
                 Text("Profile")
