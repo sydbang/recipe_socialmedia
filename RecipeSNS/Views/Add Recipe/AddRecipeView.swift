@@ -76,7 +76,17 @@ struct AddRecipeView: View {
                         Spacer()
                     }
                     // need to create sheet for imagepicker
-                     
+                    
+                    // The recipe meta data
+                    AddMetaData(name: $name,
+                                description: $description,
+                                cookTime: $cookTime,
+                                prepTime: $prepTime,
+                                totalTime: $totalTime,
+                                servings: $servings, source: $source, category: $category)
+                    // List data
+                    AddListData(list: $highlights, title: "Highlights", placeholderText: "Vegetarian")
+                    AddListData(list: $directions, title: "Directions", placeholderText: "Add the oil to the pan")
                 }
             }
         }
