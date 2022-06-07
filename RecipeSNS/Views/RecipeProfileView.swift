@@ -13,13 +13,14 @@ struct RecipeProfileView: View {
     @EnvironmentObject var user: UserModel
     
     @Binding var selectedTab: Int
+    @State var isShowingAddRecipeView = false
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
                     
-                    NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab), label: {Image(systemName: "plus.circle")})
+                    NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab, isShowingAddRecipeView: $isShowingAddRecipeView), isActive: $isShowingAddRecipeView, label: {Image(systemName: "plus.circle")})
                         
  
                 }

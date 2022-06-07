@@ -12,6 +12,8 @@ struct AddRecipeView: View {
     // Tab selection - to return the user back to tab views
     @Binding var tabSelection: Int
     
+    @Binding var isShowingAddRecipeView: Bool
+    
     // Properties for recipe meta data
     @State private var name = ""
     @State private var description = ""
@@ -40,9 +42,17 @@ struct AddRecipeView: View {
     var body: some View {
         VStack {
             HStack {
-                Button("Clear") {
-                    clear()
+                VStack {
+                    Button("< Back") {
+                        isShowingAddRecipeView = false
+                    }
+                    
+                    Button("Clear") {
+                        clear()
+                    }
+                    
                 }
+                
                 Spacer()
                 Button("Add") {
                     addRecipe()
@@ -124,6 +134,6 @@ struct AddRecipeView: View {
 
 struct AddRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRecipeView(tabSelection: Binding.constant(Constants.homeTab))
+        AddRecipeView(tabSelection: Binding.constant(Constants.homeTab), isShowingAddRecipeView: Binding.constant(true))
     }
 }
