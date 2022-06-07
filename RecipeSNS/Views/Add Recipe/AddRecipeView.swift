@@ -87,6 +87,9 @@ struct AddRecipeView: View {
                     // List data
                     AddListData(list: $highlights, title: "Highlights", placeholderText: "Vegetarian")
                     AddListData(list: $directions, title: "Directions", placeholderText: "Add the oil to the pan")
+                    
+                    // Ingredients
+                    
                 }
             }
         }
