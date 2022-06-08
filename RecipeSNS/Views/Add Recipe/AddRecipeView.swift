@@ -62,7 +62,7 @@ struct AddRecipeView: View {
             }
             
             // Scroll view
-            ScrollView {
+            ScrollView (showsIndicators: false){
                 VStack {
                     
                     // Recipe Image
@@ -85,7 +85,9 @@ struct AddRecipeView: View {
                         }
                         Spacer()
                     }
-                    // need to create sheet for imagepicker
+                    .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
+                        ImagePicker(selectedSource: selectedImageSource, recipeImage: $recipeImage)
+                    }
                     
                     // The recipe meta data
                     AddMetaData(name: $name,
@@ -105,6 +107,13 @@ struct AddRecipeView: View {
         }
         .padding()
         .navigationBarHidden(true)
+    }
+    
+    func loadImage() {
+        // Check if an image was selected from the library
+        if recipeImage != nil {
+            placeHolderImage = Image(uiImage: recipeImage!)
+        }
     }
     
     func clear() {

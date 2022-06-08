@@ -28,6 +28,7 @@
 		3B844FF02795E6A800CFCC86 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */; };
 		3BC10BDE27E9C83D00485765 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BDD27E9C83D00485765 /* LaunchView.swift */; };
 		3BC10BE127E9C92300485765 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC10BE027E9C92300485765 /* UserModel.swift */; };
+		3BC919ED2850FB59003E8206 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC919EC2850FB59003E8206 /* ImagePicker.swift */; };
 		3BD7F9FB27A8983C003274D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7F9FA27A8983C003274D5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3B844FEF2795E6A800CFCC86 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		3BC10BDD27E9C83D00485765 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		3BC10BE027E9C92300485765 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3BC919EC2850FB59003E8206 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3BD7F9FA27A8983C003274D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54C7C8C516E139E2CAE007E5 /* Pods_RecipeSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		975E6EB41E191E5DB14FD2FB /* Pods-RecipeSNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSNS.release.xcconfig"; path = "Target Support Files/Pods-RecipeSNS/Pods-RecipeSNS.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3B5A00E0284FCBC00008E1CE /* AddMetaData.swift */,
 				3B5A00E3284FCBFE0008E1CE /* AddListData.swift */,
 				3B5A00E6284FCFB30008E1CE /* AddIngredientData.swift */,
+				3BC919EC2850FB59003E8206 /* ImagePicker.swift */,
 			);
 			path = "Add Recipe";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				3B844FED2795E61600CFCC86 /* Ingredient.swift in Sources */,
 				3B844FC5278CE01900CFCC86 /* RecipeTabView.swift in Sources */,
 				3B5A00E1284FCBC00008E1CE /* AddMetaData.swift in Sources */,
+				3BC919ED2850FB59003E8206 /* ImagePicker.swift in Sources */,
 				3B844FD9278CE79000CFCC86 /* RecipeSearchView.swift in Sources */,
 				3B844FE3278CE96C00CFCC86 /* Constants.swift in Sources */,
 				3B844FC3278CE01900CFCC86 /* RecipeSNSApp.swift in Sources */,
