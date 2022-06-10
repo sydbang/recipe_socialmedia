@@ -9,7 +9,11 @@ import SwiftUI
 
 struct RecipeHomeView: View {
     var body: some View {
-        Text("Descover New Recipes")
+        VStack {
+            Text("Descover New Recipes")
+            RecipeCardView()
+                .padding()
+        }
     }
 }
 
