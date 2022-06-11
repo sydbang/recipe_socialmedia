@@ -38,21 +38,21 @@ struct Tabs: View {
                                     HStack {
                                         // Image
                                         AnyView(tabs[col].icon)
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.gray)
                                             .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 0))
                                         
                                         // Text
                                         Text(tabs[col].title)
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.gray)
                                             .padding(EdgeInsets(top: 10, leading: 3, bottom: 10, trailing: 15))
                                     }
                                     .frame(width: geoWidth/CGFloat(tabs.count), height: 52)
                                     // Bar indicator
-                                    Rectangle().fill(selectedTab == col ? Color.white : Color.clear)
+                                    Rectangle().fill(selectedTab == col ? Color.red : Color.clear)
                                         .frame(height: 3)
                                 }.fixedSize()
                             })
-                            .accentColor(.white)
+                            .accentColor(.blue)
                             .buttonStyle(PlainButtonStyle())
                         }
                     }

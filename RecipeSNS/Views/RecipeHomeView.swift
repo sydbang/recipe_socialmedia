@@ -9,10 +9,17 @@ import SwiftUI
 
 struct RecipeHomeView: View {
     var body: some View {
-        VStack {
-            Text("Descover New Recipes")
-            RecipeCardView()
-                .padding()
+        NavigationView {
+            VStack {
+                Text("Descover New Recipes")
+                NavigationLink(
+                    destination: RecipeDetailView(),
+                    label: {
+                        RecipeCardView()
+                            .padding()
+                    }
+                )
+            }
         }
     }
 }
