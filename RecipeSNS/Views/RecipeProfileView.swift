@@ -25,11 +25,16 @@ struct RecipeProfileView: View {
                         .clipShape(Circle())
                         .frame(width: 100, height: 100)
                     
-                    NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab, isShowingAddRecipeView: $isShowingAddRecipeView), isActive: $isShowingAddRecipeView, label: {Image(systemName: "plus.circle")})
-                        
- 
+                    VStack {
+                        Text("@SydneyBang")
+                        Text("Like to be a quick and easy food chef, so that's what you will find here!")
+                    }
+                    
+                    NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab, isShowingAddRecipeView: $isShowingAddRecipeView), isActive: $isShowingAddRecipeView, label: {Image(systemName: "plus.circle")
+                        .frame(height:20)
+                    })
                 }
-                Text("Profile")
+                .padding()
                 
                 Button {
                     try! Auth.auth().signOut()

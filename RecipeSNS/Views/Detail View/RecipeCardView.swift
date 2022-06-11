@@ -23,6 +23,10 @@ struct RecipeCardView: View {
                         Text("Eggplant rice")
                             .padding(5)
                             .font(Font.custom("Avenir", size: 15))
+                        Text("Time to prep: ")
+                        Text("Time to cook: ")
+                        Text("Category: ")
+                        Text("Highlights: ")
                     }
                 }
             }
