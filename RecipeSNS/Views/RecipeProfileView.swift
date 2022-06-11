@@ -21,8 +21,10 @@ struct RecipeProfileView: View {
                 HStack {
                     Image ("Profile Picture")
                         .resizable()
-                        .frame(width: 60, height: 60)
+                        .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
+                        .frame(width: 100, height: 100)
+                    
                     NavigationLink(destination: AddRecipeView(tabSelection: $selectedTab, isShowingAddRecipeView: $isShowingAddRecipeView), isActive: $isShowingAddRecipeView, label: {Image(systemName: "plus.circle")})
                         
  

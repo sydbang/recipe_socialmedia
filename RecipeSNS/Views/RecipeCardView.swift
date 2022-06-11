@@ -18,9 +18,12 @@ struct RecipeCardView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipped()
-                    Text("Eggplant rice")
-                        .padding(5)
-                        .font(Font.custom("Avenir", size: 15))
+                        .frame(width: 150, height: 150)
+                    VStack {
+                        Text("Eggplant rice")
+                            .padding(5)
+                            .font(Font.custom("Avenir", size: 15))
+                    }
                 }
             }
             .cornerRadius(15)
