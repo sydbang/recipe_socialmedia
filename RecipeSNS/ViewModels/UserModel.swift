@@ -11,8 +11,12 @@ import FirebaseAuth
 class UserModel: ObservableObject {
     
     @Published var loggedIn: Bool = false
+    //@Published var user: User
+    
     
     init() {
+        
+        
     }
     
     func checkLogin() {

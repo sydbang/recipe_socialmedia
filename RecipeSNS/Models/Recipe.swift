@@ -7,20 +7,20 @@
 
 import Foundation
 
-class Recipe: Identifiable, Decodable {
+struct Recipe: Identifiable {
     
-    var id:UUID?
+    var id:String?
     
-    var name:String
-    var description: String 
-    var prepTimeMin: Int
-    var cookTimeMin: Int
+    var name:String?
+    var description: String?
+    var prepTimeMin: Int?
+    var cookTimeMin: Int?
     var totalTimeMin: Int?
-    var servings: Int
-    var ingredients: [Ingredient]
-    var directions: [String]
-    var category:String
-    var source: String
-    var authorId: String
+    var servings: Int?
+    var ingredients: [Ingredient]?
+    var directions: [String]?
+    var category:String?
+    var source: String?
+    var authorId: String?
     
 }
