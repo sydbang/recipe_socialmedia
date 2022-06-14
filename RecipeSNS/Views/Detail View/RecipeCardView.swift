@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RecipeCardView: View {
+    
+    var r: Recipe
+    
     var body: some View {
         
             ZStack {
@@ -39,6 +42,6 @@ struct RecipeCardView: View {
 
 struct RecipeCardView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCardView()
+        RecipeCardView(r: Recipe())
     }
 }

@@ -13,7 +13,7 @@ class RecipeModel: ObservableObject {
     @Published var recipes = [Recipe]()
     
     init() {
-        
+        getData()
         
     }
     
@@ -22,7 +22,7 @@ class RecipeModel: ObservableObject {
         let db = Firestore.firestore()
         
         // Read the documents at a specific path
-        db.collection("receipes").getDocuments { (querySnapshot, error) in
+        db.collection("recipes").getDocuments { (querySnapshot, error) in
             // Check for error
             if error == nil {
                 // No errors
@@ -44,6 +44,7 @@ class RecipeModel: ObservableObject {
                 }
             } else {
                 // Handle the error
+                print(error!.localizedDescription)
             }
         }
     }

@@ -15,7 +15,7 @@ struct RecipeHomeView: View {
                 NavigationLink(
                     destination: RecipeDetailView(),
                     label: {
-                        RecipeCardView()
+                        RecipeCardView(r: Recipe())
                             .padding()
                     }
                 )

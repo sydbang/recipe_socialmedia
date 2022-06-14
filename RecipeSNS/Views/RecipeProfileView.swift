@@ -11,6 +11,7 @@ import FirebaseAuth
 struct RecipeProfileView: View {
     
     @EnvironmentObject var user: UserModel
+    @EnvironmentObject var recipeModel: RecipeModel
     
     @Binding var selectedTab: Int
     @State var isShowingAddRecipeView = false
@@ -42,6 +43,23 @@ struct RecipeProfileView: View {
                 } label: {
                     Text("Sign Out")
                 }
+                List(recipeModel.recipes) {r in
+                    Text(r.name!)
+                }
+//                ScrollView {
+//                    LazyVStack {
+//                        List(recipeModel.recipes) { recipe in
+//                            NavigationLink(
+//                                destination: RecipeDetailView(),
+//                                label: {
+//                                    RecipeCardView(r: recipe)
+//                                        .padding()
+//                                }
+//                            )
+//
+//                        }
+//                    }
+//                }
             }
         }
     }
