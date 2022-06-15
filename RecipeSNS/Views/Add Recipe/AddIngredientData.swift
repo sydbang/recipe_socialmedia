@@ -14,7 +14,7 @@ struct AddIngredientData: View {
     @State private var name = ""
     @State private var unit = ""
     @State private var num = ""
-    @State private var denum = ""
+    @State private var denom = ""
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -27,7 +27,7 @@ struct AddIngredientData: View {
                 TextField("1", text: $num)
                     .frame(width: 20)
                 Text("/")
-                TextField("2", text: $denum)
+                TextField("2", text: $denom)
                     .frame(width: 20)
                 TextField("cup (single unit entry only)", text: $unit)
                 
@@ -35,10 +35,10 @@ struct AddIngredientData: View {
                     // Make sure that the fields are not populated
                     let cleanedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
                     let cleanedNum = num.trimmingCharacters(in: .whitespacesAndNewlines)
-                    let cleanedDenum = denum.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let cleanedDenom = denom.trimmingCharacters(in: .whitespacesAndNewlines)
                     let cleanedUnit = unit.trimmingCharacters(in: .whitespacesAndNewlines)
                     
-                    if cleanedName == "" || cleanedNum == "" || cleanedDenum == "" || cleanedUnit == "" {
+                    if cleanedName == "" || cleanedNum == "" || cleanedDenom == "" || cleanedUnit == "" {
                         return
                     }
                     
@@ -47,7 +47,7 @@ struct AddIngredientData: View {
                     i.id = UUID()
                     i.name = cleanedName
                     i.num = Int(cleanedNum) ?? 1
-                    i.denum = Int(cleanedDenum) ?? 1
+                    i.denom = Int(cleanedDenom) ?? 1
                     i.unit = cleanedUnit
                     
                     // Add this ingredient to the list
@@ -56,7 +56,7 @@ struct AddIngredientData: View {
                     // Clear text fields
                     name = ""
                     num = ""
-                    denum = ""
+                    denom = ""
                     unit = ""
                 }
             }
