@@ -9,7 +9,20 @@ import SwiftUI
 
 struct IngredientListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                
+                Button {} label: {
+                    ButtonView(text: "metric")
+                }
+                Button {} label: {
+                    ButtonView(text: "imperial")
+                }
+            }
+            .padding()
+            
+            Spacer()
+        }
     }
 }
 

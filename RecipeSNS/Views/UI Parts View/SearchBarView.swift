@@ -31,7 +31,7 @@ struct SearchBarView: View {
             .padding()
         }
         .frame(height: 40)
-        .foregroundColor(.gray)
+        .foregroundColor(.white)
     }
 }
 
