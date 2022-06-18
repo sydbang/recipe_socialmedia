@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     
+    var r: Recipe
     @State private var selectedTab: Int = 0
     
     let tabs: [Tab] = [
@@ -40,6 +41,6 @@ struct RecipeDetailView: View {
 
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailView()
+        RecipeDetailView(r: Recipe())
     }
 }

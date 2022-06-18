@@ -13,7 +13,7 @@ struct RecipeHomeView: View {
             VStack {
                 Text("Descover New Recipes")
                 NavigationLink(
-                    destination: RecipeDetailView(),
+                    destination: RecipeDetailView(r: Recipe()),
                     label: {
                         RecipeCardView(r: Recipe())
                             .padding()
