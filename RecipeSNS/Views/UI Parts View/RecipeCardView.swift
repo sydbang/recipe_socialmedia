@@ -22,6 +22,7 @@ struct RecipeCardView: View {
                         .aspectRatio(contentMode: .fit)
                         .clipped()
                         .frame(width: 150, height: 150)
+                        .padding(.vertical)
                     VStack {
                         Text("Eggplant rice")
                             .padding(5)
@@ -32,9 +33,12 @@ struct RecipeCardView: View {
                         Text("Highlights: ")
                     }
                 }
+                .frame(maxWidth: . infinity, alignment: .center)
             }
             .cornerRadius(15)
             .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
+            .fixedSize(horizontal: false, vertical: true)
+
             
         
     }
