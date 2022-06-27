@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct RecipeProfileView: View {
     
-    @EnvironmentObject var user: UserModel
+    @EnvironmentObject var userModel: UserModel
     @EnvironmentObject var recipeModel: RecipeModel
     
     @Binding var selectedTab: Int
@@ -27,7 +27,7 @@ struct RecipeProfileView: View {
                         .frame(width: 100, height: 100)
                     
                     VStack {
-                        Text("@SydneyBang")
+                        Text("@\(userModel.user.userId!)")
                         Text("Like to be a quick and easy food chef, so that's what you will find here!")
                     }
                     
@@ -39,7 +39,7 @@ struct RecipeProfileView: View {
                 
                 Button {
                     try! Auth.auth().signOut()
-                    user.loggedIn = false
+                    userModel.loggedIn = false
                 } label: {
                     Text("Sign Out")
                 }

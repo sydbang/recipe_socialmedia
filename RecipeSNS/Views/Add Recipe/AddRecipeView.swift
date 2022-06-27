@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AddRecipeView: View {
     
+    @EnvironmentObject var userModel: UserModel
+    @EnvironmentObject var recipeModel: RecipeModel
+    
     // Tab selection - to return the user back to tab views
     @Binding var tabSelection: Int
     
@@ -55,7 +58,7 @@ struct AddRecipeView: View {
                 
                 Spacer()
                 Button("Add") {
-                    addRecipe()
+                    //recipeModel.addRecipe(authorId: userModel.user.userId, name: name, description: description, prepTimeMin: prepTime, cookTimeMin: cookTime, totalTimeMin: totalTime, servings: servings, category: category, source: source)
                     clear()
                     tabSelection = Constants.profileTab
                 }
@@ -133,10 +136,6 @@ struct AddRecipeView: View {
         
         recipeImage = nil
         placeHolderImage = Image("noImageAvailable")
-    }
-    
-    func addRecipe() {
-        // TODO
     }
     
 }
