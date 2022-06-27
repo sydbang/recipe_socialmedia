@@ -17,6 +17,28 @@ class RecipeModel: ObservableObject {
         
     }
     
+    func addRecipe(authorId: String, name: String, description: String, prepTimeMin: Int, cookTimeMin: Int, totalTimeMin: Int, servings: Int, category: String, source: String) {
+        // Get a reference to the database
+        let db = Firestore.firestore()
+        
+        // Add a document to collection
+        db.collection("recipes").addDocument(data: ["authorId" : authorId, "name":name, "description": description, "prepTimeMin":prepTimeMin, "cookTimeMin":cookTimeMin, "tota;lTimeMin":totalTimeMin, "servings":servings, "category":category, "source": source]) { error in
+            
+            // Check for error
+            if error == nil {
+                // no error
+                
+                // Call get data to retrieve the latest
+                self.getData()
+                
+            } else {
+                // handle the error
+                
+            }
+        }
+    }
+    
+    
     func getData() {
         // Get a reference to the database
         let db = Firestore.firestore()
