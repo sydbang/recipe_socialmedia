@@ -19,6 +19,7 @@ struct RecipeHomeView: View {
                             .padding()
                     }
                 )
+                Spacer()
             }
         }
     }

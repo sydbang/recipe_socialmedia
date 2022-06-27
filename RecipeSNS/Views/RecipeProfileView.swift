@@ -43,23 +43,24 @@ struct RecipeProfileView: View {
                 } label: {
                     Text("Sign Out")
                 }
-                List(recipeModel.recipes) {r in
-                    Text(r.name!)
-                }
-//                ScrollView {
-//                    LazyVStack {
-//                        List(recipeModel.recipes) { recipe in
-//                            NavigationLink(
-//                                destination: RecipeDetailView(),
-//                                label: {
-//                                    RecipeCardView(r: recipe)
-//                                        .padding()
-//                                }
-//                            )
-//
-//                        }
-//                    }
+//                List(recipeModel.recipes) {r in
+//                    Text(r.name!)
+//                    RecipeCardView(r: r)
 //                }
+                ScrollView {
+                    LazyVStack {
+                        ForEach (recipeModel.recipes) { recipe in
+                            NavigationLink(
+                                destination: RecipeDetailView(r: recipe),
+                                label: {
+                                    RecipeCardView(r: recipe)
+                                        .padding()
+                                }
+                            )
+
+                        }
+                    }
+                }
             }
         }
     }
